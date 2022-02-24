@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+// import React from 'react';
+import { useEffect } from 'react';
+
+
+// library imports
+import { Routes, Route, useParams } from 'react-router-dom';
+import { Button } from '@mui/material';
+
 import './App.css';
 
-function App() {
+// CUSTOM IMPORTS
+import {
+  Home,
+  Detailed,
+  DetailedNull,
+  Whoops
+} from './pages/index';
+
+
+export default function App() {
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    // ROUTER
+    <>
+      <Routes>
+
+        <Route path='/' element={<Home />} />
+        <Route path='*' element={<Whoops />} />
+        <Route path='/x' element ={<DetailedNull />} />
+        <Route path='/x/:imgIndex' element={<Detailed />} />
+
+      </Routes>
+    </>
+    
+
   );
 }
 
-export default App;
+// PROTOTYPE PAGE COMPONENTS
+
+
+
+
+
+
+

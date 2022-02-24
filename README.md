@@ -1,70 +1,50 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://github.com/BrianLeal/explore-the-universe
+# Project Title
+## Overview
+## Table of Contents
+## Description
+## Instalation
+## Usage
 
-## Available Scripts
 
-In the project directory, you can run:
+# Project Management Plan
+## Meeting Minutes
+[Google Docs](https://docs.google.com/document/d/1MTWJ4a-gqoguZJ0wuAttwM-KTt9vggshvB8eIYDHdnE/edit?usp=sharing)
 
-### `npm start`
+## Kick Off
+### MVP
+- Display photo thumbnails of all images.
+- Search function to narrow image requests.
+- Clicking on the image displays more detailed information.
+- Must be responsive.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Stories
+As a ... I want to... So that...
+1. As a student, I want to see multiple photos at once (on my laptop), so that I can dig into additional details on the images that are the most relevant.
+2. As a student, I want to click on an image and see more detailed information so I can learn about space.
+3. As a student, I want to see all the images on my phone, so I can marvel in what humanity has been able to capture.
+4. As a professor, I want to search and only see relevent photos so I can use the photos in a powerpoint.
+5. As a professor, I want to be able to share the link to a detailed photo so I can share information to my students.
+6. As a student, I only want a few photos loaded to my device at a time to save on bandwith. 
+7. As a student, I want to be able to filter photos based on tags so I can only see only information that will help me complete an assignment.
+8. As a student, I want to be able to filter photos based on catagory so I can only see photos that specifically peak my interest.
+9. As a student, I want to be able to search based on description so I can read more about things that interest me.
+10. As a professor, I want to install the application on a local server so I can manage the data offline.
+11. As a professor, I want to easily change the API base URL in case the database moves in the future.
+12. As a student, I want to click a button to return back to the search page, so that I can access previous searches.
+13. As a student, I want to see the title of each photo on the home page, so that I have a better idea of whether I want to see more detailed information on.
+14. As a student, I want to see associated tags for each photo on the detailed view, so that I can dig deeper into a niche within my assignment.
+15. As a student, I want to see a detailed description of a photo after I click on it, so that I can absorb as much available information as possible.
+16. As a student, I want the page to still load if the photo data becomes corrupted so that I can still the additional information attached to that photo.
 
-### `npm test`
+### Wireframes
+[Home](https://wireframe.cc/Uk0EAA)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Detailed](https://wireframe.cc/KpO0Ws)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### API Docs and Modules
+[hubble site API](https://awesomeopensource.com/project/Spectre-ak/api-hubblesite)
+[Spring](https://react-spring.io/hooks/use-springs)
+[MUI](https://mui.com/getting-started/installation/)
