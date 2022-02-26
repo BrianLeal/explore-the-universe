@@ -1,17 +1,15 @@
+html { 
+  background-color: rgb(19, 39, 61);
+  font-family: monospace, Menlo, Monaco, Consolas, 'Courier New';
+}
+
 body {
   margin: 1em;
   /* font-family: serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
-
 }
 
-html {
-  background-color: #ccc;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.postcard {
+  color: blue;
 }

@@ -1,116 +1,71 @@
 import React from 'react';
+import { useContext } from 'react';
 import data from '../db/test';
+
 // GRID
 import Postcard from '../comp/Postcard';
+import Header from '../comp/Header';
+import Footer from '../comp/Footer';
+import { SiteContext } from '../context/SiteData';
+
 import { styled } from '@mui/material/styles';
 import { 
     Box,
-    Paper,
     Grid,
-    TextField,
-    Button
+    LinearProgress
 } from '@mui/material';
 
 // STYLE
 import './style/home.css';
-// import '../App.css';
 
 
-let rawData = JSON.parse(data[0]);
+
 let testData = [];
-testData.push(rawData);
-console.log('testData', testData);
-
-const mappedTest = testData.map((item) => <li>{ item.title.children }</li>)
-
-
- console.log('mapped test:' , mappedTest);
-
-
-
-
-// const Item = styled(Paper)(({ theme }) => ({
-//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-//   }));
+for(let i = 0; i < data.length; i++){
+  let rawData = JSON.parse(data[i]);
+  testData.push(rawData);
+} 
+// const mappedArray = testData.map((item) => console.log('date', item.date));
 
 
   export default function Home (){
+ // EXAMPLE: const { siteTitle, luckyNumbers, setFavoriteColor, favoriteColor } = useContext(SiteContext); luckyNumbers, setFavoriteColor, favoriteColor } = useContext(SiteContext);
+    const { filteredDataAPI } = useContext(SiteContext); 
+
+    
     return(
       <div className="App">
-          {/* // HEADER COMP */}
-
-
-        <header className='app-header'>
-        {/* <h1>Explore The Universe</h1> */}
-            <Grid container spacing={0}>
-                <Grid item xs={12}>
-                  
-                    <h1>Explore The Universe</h1>
-                   
-                </Grid>
-            <Grid item xs={12}>
-               
-                    <form>
-                        <Box
-                        component="form"
-                        sx={{
-                            '& > :not(style)': { m: 1, width: '30em' },
-                        }}
-                        noValidate
-                        autoComplete="off"
-                        >
-                            <TextField id="search-bar" label="Search" variant="standard" name="search"/>
-                            <br></br>
-                            <Button variant="contained">Search</Button>
-                        </Box>
-                    </form>
-                
-                </Grid>
-            </Grid>
-        </header>
+        {/* // HEADER COMP */}
+            <Header />
 
         {/* // FILTER COMP */}
 
         {/* // THE GRID COMP */}
         <hr></hr>
-        <Box data-testid="grid-container" sx={{ flexGrow: 1 }}>
-            <Grid container spacing={3}>
-                {/* PROPS USED FOR POST CARD: title, imgUrl, shortDescription */}
-                <Grid item xs={4}>
-                    <Postcard />
-                </Grid>
-                <Grid item xs={4}>
-                    <Postcard />
-                </Grid>
-                <Grid item xs={4}>
-                    <Postcard />
-                </Grid>
-                <Grid item xs={4}>
-                    <Postcard />
-                </Grid>
-                <Grid item xs={4}>
-                    <Postcard />
-                </Grid>
-                <Grid item xs={4}>
-                    <Postcard />
-                </Grid>
-                <Grid item xs={4}>
-                    <Postcard />
-                </Grid>
-                <Grid item xs={4}>
-                    <Postcard />
-                </Grid>
+            <Box data-testid="grid-container" sx={{ flexGrow: 1, paddingTop: 8, paddingBottom: 8 }}>
+                <Grid container spacing={3}>
+                    {/* PROPS USED FOR POST CARD: title, imgUrl, releaseDate */}
+                        
+                    {(filteredDataAPI.length > 0) ? <PostcardMap mapData={filteredDataAPI} /> : <PostcardMap mapData={testData} />}
+                
 
-
-            </Grid>
-        </Box>
-
+                </Grid>
+            </Box>
+        {/* //FOOTER COMP */}
+        <hr></hr>
+        <Footer />
       </div>
 
 
+    );
+  }
+
+  function PostcardMap ({ mapData }){
+    return(
+        mapData.map((item) => 
+            <Grid item xs={4}>
+                <Postcard title={item.title} imgUrl={item.imgWithRes[0][0]} releaseDate={item.date} />
+            </Grid>
+        )
     );
   }

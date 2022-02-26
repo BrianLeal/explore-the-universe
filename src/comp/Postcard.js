@@ -8,23 +8,26 @@ import {
     CardActionArea
 } from '@mui/material';
 
-export default function Postcard ({title, imgUrl, shortDescription}) {
+export default function Postcard ({title, imgUrl, releaseDate}) {
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card className="postcard" sx={{ 
+            maxWidth: 400,
+            minHeight: 400
+         }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="140"
+                    height="220"
                     image={imgUrl}
                     alt={title}
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {title}
+                <CardContent >
+                    <Typography  sx={{fontFamily: "monospace"}} data-testid="img-title" gutterBottom variant="h5" maxHeight="300" >
+                        <h5>{title}</h5>
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {shortDescription}
+                    <Typography sx={{fontFamily: "monospace"}} variant="body2" color="text.secondary" >
+                        {releaseDate}
                     </Typography>
                 </CardContent>
             </CardActionArea>
@@ -37,3 +40,4 @@ Postcard.defaultProps = {
     shortDescription: 'We are having issues loading this content. Please try again later.',
     imgUrl: 'https://media.gettyimages.com/photos/image-of-an-astronaut-and-a-space-shuttle-in-space-low-angle-view-picture-id79337786'
 }
+

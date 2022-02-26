@@ -3,10 +3,9 @@ import { useEffect } from 'react';
 
 
 // library imports
-import { Routes, Route, useParams } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Button } from '@mui/material';
 
-import './App.css';
 
 // CUSTOM IMPORTS
 import {

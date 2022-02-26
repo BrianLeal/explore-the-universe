@@ -1,12 +1,17 @@
 .app-header {
     text-align: center;
     top: 0px;
-    position: sticky;
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     /* font-size: calc(10px + 2vmin); */
     color: black;
+    background-color: rgb(221, 221, 221);
+    letter-spacing: 1.2em;
+    border-radius: 90px;
+    padding-bottom: 0.4em;
+    
       }
   

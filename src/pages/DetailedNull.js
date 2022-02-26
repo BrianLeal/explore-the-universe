@@ -1,10 +1,16 @@
 import React from 'react';
 
+import Header from '../comp/Header';
+import Footer from '../comp/Footer';
+
 export default function DetailedNullPage (){
  
 
     return (
+
+      
       <div>
+        <Header />
         <h1>Planetary Search Placeholder</h1>
         <h2>
           {/* 
@@ -13,6 +19,7 @@ export default function DetailedNullPage (){
           */}
           Planetary image ID is missing.
         </h2>
+        <Footer />
       </div>
     );
   
