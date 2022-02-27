@@ -14,8 +14,11 @@ export default function () {
         <header className='app-header'>
             <Grid container spacing={0}>
                 <Grid item xs={12}>
-                    <h1>Explore The Universe</h1>
-                    <h3>👩‍🚀🚀👾👨‍🚀</h3>
+                    <a href='/' style={{color: 'black', textDecoration: "none"}}>
+                        <h1>Explore The Universe</h1>
+                        <h3>👩‍🚀🚀👾👨‍🚀</h3>
+                    </a>
+                    
                 </Grid>
             <Grid item xs={12}>
                     <form>

@@ -30,7 +30,7 @@ export default function SiteContextProvider({children}){
               tempArray.push(rawDataAPI);
           }
           setFilteredDataAPI(tempArray);
-          console.log('tempArray', tempArray);
+        //   console.log('tempArray', tempArray);
         }
     },[planetaryData]);
 

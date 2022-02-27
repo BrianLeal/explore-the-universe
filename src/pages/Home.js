@@ -62,9 +62,11 @@ for(let i = 0; i < data.length; i++){
 
   function PostcardMap ({ mapData }){
     return(
-        mapData.map((item) => 
+        mapData.map((item, key) => 
             <Grid item xs={4}>
-                <Postcard title={item.title} imgUrl={item.imgWithRes[0][0]} releaseDate={item.date} />
+              <a  href={`/x/${key}`}>
+                <Postcard id={key} title={item.title} imgUrl={item.imgWithRes[0][0]} releaseDate={item.date} />
+              </a>
             </Grid>
         )
     );
