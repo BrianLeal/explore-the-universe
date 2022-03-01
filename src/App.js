@@ -12,6 +12,8 @@ import {
   Home,
   Detailed,
   DetailedNull,
+  Tags,
+  FilteredTags,
   Whoops
 } from './pages/index';
 
@@ -27,8 +29,11 @@ export default function App() {
 
         <Route path='/' element={<Home />} />
         <Route path='*' element={<Whoops />} />
-        <Route path='/x' element ={<DetailedNull />} />
-        <Route path='/x/:imgIndex' element={<Detailed />} />
+        <Route path='/index' element ={<DetailedNull />} />
+        <Route path='/index/:imgIndex' element={<Detailed />} />
+
+        <Route path='/tags' element ={<Tags />} />
+        <Route path='/tags/:filteredTag' element={<FilteredTags />} />
 
       </Routes>
     </>

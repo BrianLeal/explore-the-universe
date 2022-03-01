@@ -4,6 +4,8 @@ import React from "react";
 import HomePage from './Home';
 import DetailedPage from "./Detailed";
 import DetailedNullPage from "./DetailedNull";
+import TagsPage from "./Tags"
+import FilteredTagsPage from "./FilteredTags"
 
 
 // MANAGE PAGES
@@ -18,6 +20,14 @@ export function Detailed() {
 export function DetailedNull() {
     return <DetailedNullPage />
   }
+
+export function Tags() {
+  return <TagsPage />
+}
+
+export function FilteredTags() {
+  return <FilteredTagsPage />
+}
 
 
 /*

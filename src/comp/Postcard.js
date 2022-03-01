@@ -13,7 +13,8 @@ export default function Postcard ({title, imgUrl, releaseDate}) {
     return (
         <Card className="postcard" sx={{ 
             maxWidth: 400,
-            minHeight: 400
+            minHeight: 450,
+            backgroundColor: "#ddd"
          }}>
             <CardActionArea>
                 <CardMedia
